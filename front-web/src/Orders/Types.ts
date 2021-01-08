@@ -1,5 +1,3 @@
-import { ExecSyncOptionsWithBufferEncoding } from "child_process"
-
 export type Product = {
     id: number;
     name: string;
@@ -12,3 +10,11 @@ export type OrderLocationData = {
     longitude: Number;
     address: String;
 }
+
+type ProductId ={
+    id: number;
+}
+
+export type OrderPayLoad = {
+    products : ProductId[];
+} & OrderLocationData;
